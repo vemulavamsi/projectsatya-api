@@ -29,18 +29,18 @@ RUN apt-get update && apt-get install -y \
 # RUN apt-get update && apt-get install -y wget
 
 # Download and install Filebeat
-RUN wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | apt-key add -
-RUN sh -c 'echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" > /etc/apt/sources.list.d/elastic-7.x.list'
-RUN apt-get update && apt-get install -y filebeat
+# RUN wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | apt-key add -
+# RUN sh -c 'echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" > /etc/apt/sources.list.d/elastic-7.x.list'
+# RUN apt-get update && apt-get install -y filebeat
 
-# Copy Filebeat configuration file
-COPY filebeat.yml /etc/filebeat/filebeat.yml
+# # Copy Filebeat configuration file
+# COPY filebeat.yml /etc/filebeat/filebeat.yml
 
-# Use the official Elasticsearch image as the base image
-FROM docker.elastic.co/elasticsearch/elasticsearch:7.16.3
+# # Use the official Elasticsearch image as the base image
+# FROM docker.elastic.co/elasticsearch/elasticsearch:7.16.3
 
-# Add your custom Elasticsearch configuration
-COPY elasticsearch.yml /usr/share/elasticsearch/config/
+# # Add your custom Elasticsearch configuration
+# COPY elasticsearch.yml /usr/share/elasticsearch/config/
 
 
 ARG NODE_VERSION=14.16.0

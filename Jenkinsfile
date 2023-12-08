@@ -46,11 +46,6 @@ pipeline {
 						sh 'docker ps -f name=My-practice-website -q | xargs --no-run-if-empty docker container stop'
 
 						sh 'docker container ls -a -fname=My-practice-website -q | xargs -r docker container rm'
-						// creating container and port mapping
-                    
-						// sh "docker run -d --name vamsi-Adi-practice -p 3000:3000 public.ecr.aws/g8i9m6o6/learning111:latest" 
-						//logs
-						//sh "docker run -d -p 3000:3000 --name My-practice-website --log-driver=awslogs --log-opt awslogs-region=us-east-1 --log-opt awslogs-group=$LOG_GROUP_NAME 933794111312.dkr.ecr.us-east-1.amazonaws.com/automationecr:latest"
                 }
 			}
 		}
