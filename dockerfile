@@ -64,5 +64,5 @@ ENV PORT=3000
 
 EXPOSE ${PORT}
 
-CMD [ "npm", "start" ,"filebeat", "-e","nodemon server.js"]
+CMD [ "npm", "start","nodemon server.js"]
 
