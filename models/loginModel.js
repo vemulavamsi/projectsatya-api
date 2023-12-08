@@ -71,8 +71,8 @@ class LoginModel {
   }
   static async registerUser (context, regData) {
     try {
-      const qry = "insert into users (user_name,password,email,first_name) values (?,?,?,?)";	  
-      const args = [regData.email , regData.password ,regData.email,regData.user_name];
+      const qry = "insert into users (user_name,password,email,first_name,mobile) values (?,?,?,?,?)";	  
+      const args = [regData.email , regData.password ,regData.email,regData.user_name, regData.mobile];
 
       const rawResult = await CoreDAL.executeQuery(
         context,
@@ -94,4 +94,3 @@ class LoginModel {
 
 module.exports = LoginModel;
 
-// Copyright (C) 2019, Pycube Aktivu. All rights reserved.

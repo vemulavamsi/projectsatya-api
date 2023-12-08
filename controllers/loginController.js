@@ -71,7 +71,8 @@ class LoginController {
         var data = {
           user_name: regData.user_name,
           password: await getHashPwd(regData.password),
-          email: regData.email,
+          mobile: regData.mobile,
+          email: regData.email
         };
         console.log("*****************",data)
         const userObj = await LoginDAL.registerUser(dbConn,data);
