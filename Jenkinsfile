@@ -43,10 +43,10 @@ pipeline {
 						// Pulling latest version of docker image
 						sh "docker pull 940705824822.dkr.ecr.us-east-1.amazonaws.com/mypracticewebsitel:latest"
                     
-						sh 'docker ps -f name=My-practice-website -q | xargs --no-run-if-empty docker container stop'
+						sh 'docker ps -f name=mypracticewebsitel -q | xargs --no-run-if-empty docker container stop'
 
 						sh 'docker container ls -a -fname=My-practice-website -q | xargs -r docker container rm'
-                        sh "docker run -d --name My-practice-website -p 3000:3000 public.ecr.aws/g8i9m6o6/mypracticewebsitel:latest"
+                        sh "docker run -itd --name My-practice-website -p 3000:3000 mypracticewebsitel:latest"
                 }
 			}
 		}
