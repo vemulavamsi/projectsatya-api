@@ -8,17 +8,17 @@ pipeline {
         LOG_STREAM_NAME = '${BUILD_NAME}-${BUILD_NUMBER}'
     }
      stages {
-        stage('Publish to CloudWatch Logs') {
-            steps {
-                script {
+        // stage('Publish to CloudWatch Logs') {
+        //     steps {
+        //         script {
                     
-                    sh "aws configure set region ${AWS_REGION}"
-                    sh " aws logs create-log-stream --log-group-name $LOG_GROUP_NAME --log-stream-name $LOG_STREAM_NAME"
-                    // Publish logs to CloudWatch
-                    sh "echo 'Hello cloudies Logs are on the way ..........!'"
-                }
-            }
-        }
+        //             sh "aws configure set region ${AWS_REGION}"
+        //             sh " aws logs create-log-stream --log-group-name $LOG_GROUP_NAME --log-stream-name $LOG_STREAM_NAME"
+        //             // Publish logs to CloudWatch
+        //             sh "echo 'Hello cloudies Logs are on the way ..........!'"
+        //         }
+        //     }
+        // }
     
         stage('Push Docker image to ECR') {
             steps {
@@ -50,7 +50,7 @@ pipeline {
                     
 						// sh "docker run -d --name vamsi-Adi-practice -p 3000:3000 public.ecr.aws/g8i9m6o6/learning111:latest" 
 						//logs
-						sh "docker run -d -p 3000:3000 --name My-practice-website --log-driver=awslogs --log-opt awslogs-region=us-east-1 --log-opt awslogs-group=$LOG_GROUP_NAME 933794111312.dkr.ecr.us-east-1.amazonaws.com/automationecr:latest"
+						//sh "docker run -d -p 3000:3000 --name My-practice-website --log-driver=awslogs --log-opt awslogs-region=us-east-1 --log-opt awslogs-group=$LOG_GROUP_NAME 933794111312.dkr.ecr.us-east-1.amazonaws.com/automationecr:latest"
                 }
 			}
 		}
