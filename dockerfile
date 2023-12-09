@@ -42,9 +42,7 @@ RUN apt-get update && apt-get install -y \
 # # Add your custom Elasticsearch configuration
 # COPY elasticsearch.yml /usr/share/elasticsearch/config/
 # Install application dependencies
-RUN npm install
-# Install nodemon
-RUN npm install -g nodemon
+
 
 ARG NODE_VERSION=14.16.0
 ARG NODE_PACKAGE=node-v$NODE_VERSION-linux-x64
@@ -58,9 +56,10 @@ RUN curl https://nodejs.org/dist/v$NODE_VERSION/$NODE_PACKAGE.tar.gz | tar -xzC 
 WORKDIR /app
 
 COPY package*.json ./
-
+# Install application dependencies
 RUN npm install
-
+# Install nodemon globally
+#RUN npm install -g nodemon
 COPY . .
 
 ENV PORT=3000
