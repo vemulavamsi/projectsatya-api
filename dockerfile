@@ -41,7 +41,8 @@ RUN apt-get update && apt-get install -y \
 
 # # Add your custom Elasticsearch configuration
 # COPY elasticsearch.yml /usr/share/elasticsearch/config/
-
+# Install application dependencies
+RUN npm install
 # Install nodemon
 RUN npm install -g nodemon
 
