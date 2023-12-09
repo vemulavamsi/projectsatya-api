@@ -42,6 +42,8 @@ RUN apt-get update && apt-get install -y \
 # # Add your custom Elasticsearch configuration
 # COPY elasticsearch.yml /usr/share/elasticsearch/config/
 
+# Install nodemon
+RUN npm install -g nodemon
 
 ARG NODE_VERSION=14.16.0
 ARG NODE_PACKAGE=node-v$NODE_VERSION-linux-x64
@@ -64,5 +66,5 @@ ENV PORT=3000
 
 EXPOSE ${PORT}
 
-CMD ["nodemon server.js"]
+CMD ["nodemon", "server.js"]
 
