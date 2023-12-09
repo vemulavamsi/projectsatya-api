@@ -25,10 +25,10 @@ pipeline {
                 script{
                    // sh "docker rmi -f learning111"
                    sh "aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 940705824822.dkr.ecr.us-east-1.amazonaws.com"
-                    sh "docker build -t mypracticewebsitel ."
+                    sh "docker build -t ambikab ."
                     //sh "docker build -t learning111 ."
-                    sh "docker tag mypracticewebsitel:latest 940705824822.dkr.ecr.us-east-1.amazonaws.com/mypracticewebsitel:latest"
-                    sh "docker push 940705824822.dkr.ecr.us-east-1.amazonaws.com/mypracticewebsitel:latest"
+                    sh "docker tag ambikab:latest 940705824822.dkr.ecr.us-east-1.amazonaws.com/ambikab:latest"
+                    sh "docker push 940705824822.dkr.ecr.us-east-1.amazonaws.com/ambikab:latest"
                 }
 			}
 		}
@@ -41,7 +41,7 @@ pipeline {
 						// Removing existing image
 						// sh "docker rmi -f automationecr"
 						// Pulling latest version of docker image
-						sh "docker pull 940705824822.dkr.ecr.us-east-1.amazonaws.com/mypracticewebsitel:latest"
+						sh "docker push 940705824822.dkr.ecr.us-east-1.amazonaws.com/ambikab:latest"
                     
 						sh 'docker ps -f name=mypracticewebsitel -q | xargs --no-run-if-empty docker container stop'
 
