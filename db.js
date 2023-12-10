@@ -4,7 +4,7 @@ var db = mysql.createConnection({
     user: 'root',
     password: '',
     port: 3000,
-    database : 'nodeAuth'
+    database : 'vamsi_project'
 });
 
 db.connect(function(err){

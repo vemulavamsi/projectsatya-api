@@ -41,7 +41,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 var options = {
 
-    host: 'localhost',
+    host: '54.173.147.100',
     user: 'root',
     password: '',
     port: 3306,
