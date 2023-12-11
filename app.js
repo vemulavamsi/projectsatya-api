@@ -41,7 +41,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 var options = {
 
-    host: '54.173.147.100',
+    host: 'localhost',
     user: 'root',
     password: '',
     port: 3306,
@@ -116,7 +116,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 3000;
 app.set("port", port);
 const server = http.createServer(app);
 //server.listen(port);
