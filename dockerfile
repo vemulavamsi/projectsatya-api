@@ -62,7 +62,7 @@ RUN npm install
 #RUN npm install -g nodemon
 COPY . .
 
-ENV PORT=4000
+ENV PORT=3000
 
 EXPOSE ${PORT}
 
