@@ -90,7 +90,7 @@ pipeline {
     steps {
         script {
             sh "docker pull 940705824822.dkr.ecr.us-east-1.amazonaws.com/ambikab:latest"
-            sh 'docker container ls -a -f name=My-practice-website -q | xargs -r docker container rm -f My-practice-website'
+            sh 'docker container ls -a -f name=My-practice-website -q | xargs -r docker container rm '
             sh "docker run -itd --name My-practice-website 940705824822.dkr.ecr.us-east-1.amazonaws.com/ambikab:latest node_modules/.bin/nodemon server.js"
         }
     }
