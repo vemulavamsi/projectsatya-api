@@ -91,7 +91,7 @@ pipeline {
         script {
             sh "docker pull 940705824822.dkr.ecr.us-east-1.amazonaws.com/ambikab:latest"
             sh 'docker container ls -a -f name=My-practice-website -q | xargs -r docker container rm -f'
-            sh "docker run -itd --name My-practice-website -p 4000:3000 940705824822.dkr.ecr.us-east-1.amazonaws.com/ambikab:latest node_modules/.bin/nodemon server.js"
+            sh "docker run -itd --name My-practice-website -p 3000:3000 940705824822.dkr.ecr.us-east-1.amazonaws.com/ambikab:latest node_modules/.bin/nodemon server.js"
         }
     }
 }
