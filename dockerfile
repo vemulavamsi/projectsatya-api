@@ -59,7 +59,7 @@ COPY package*.json ./
 # Install application dependencies
 RUN npm install
 # Install nodemon globally
-#RUN npm install -g nodemon
+RUN npm install -g nodemon
 COPY . .
 
 ENV PORT=3000
