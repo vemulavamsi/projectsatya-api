@@ -3,7 +3,7 @@ var db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
-    port: 3000,
+    port: 3306,
     database : 'vamsi_project'
 });
 

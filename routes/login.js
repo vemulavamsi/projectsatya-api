@@ -9,6 +9,9 @@ router.get('/',function(req,res,next){
         res.render('login',{});
 });
 
+router.get('/test',function(req,res,next){
+  res.send({"message" : "apiworking"});
+});
 
 //Router for user login
 router.post("/", async (req, res) => {
