@@ -66,5 +66,5 @@ ENV PORT=3000
 
 EXPOSE ${PORT}
 
-CMD ["nodemon", "server.js"]
+CMD ["node", "app.js"]
 
