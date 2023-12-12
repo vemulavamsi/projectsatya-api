@@ -8,7 +8,7 @@ exports.poolConfig = function() {
         // database:process.env.DB_SCHEMA_NAME,
         host: 'localhost',
         user: 'root',
-        password: '',
+        password: 'Pycube123$',
         port: 3306,
         database : 'vamsi_project'
         // password:process.env.DB_PASSWORD,
