@@ -41,9 +41,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 var options = {
 
-    host: 'localhost',
+    host: '172.31.88.20',
     user: 'root',
-    password: '',
+    password: 'Pycube123$',
     port: 3306,
     database : 'vamsi_project'
 };
