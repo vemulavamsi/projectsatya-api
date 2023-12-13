@@ -41,9 +41,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 var options = {
 
-    host: '172.31.88.20',
+    host: 'localhost',
     user: 'root',
-    password: 'Pycube123$',
+    password: '',
     port: 3306,
     database : 'vamsi_project'
 };
@@ -110,7 +110,7 @@ app.use(function(err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
-
+console.log("****113err0r**")
   // render the error page
   res.status(err.status || 500);
   res.render('error');
