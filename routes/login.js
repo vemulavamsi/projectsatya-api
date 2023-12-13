@@ -19,6 +19,7 @@ router.post("/", async (req, res) => {
       var loginData = req.body;
   
       let result = {};
+      console.log(LoginController)
       const obj = await LoginController.loginUser(
         loginData
       );
