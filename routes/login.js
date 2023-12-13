@@ -17,20 +17,21 @@ router.get('/test',function(req,res,next){
 router.post("/", async (req, res) => {
     try {
       var loginData = req.body;
-  
+
       let result = {};
       console.log(LoginController)
       const obj = await LoginController.loginUser(
         loginData
       );
+      console.log(obj)
       result.success = true;
         result.accesstoken = obj.sessionToken;
         result.userData = obj.userData;
       
   
       /** Auditlog Start */
-      global.LoginId = obj.userData.user_id;
-      global.CreatedName = obj.userData.user_name;
+      // global.LoginId = obj.userData.user_id;
+      // global.CreatedName = obj.userData.user_name;
       /** Auditlog End */
   
       res.send(result);
