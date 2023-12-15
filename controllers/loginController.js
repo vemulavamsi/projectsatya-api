@@ -1,6 +1,7 @@
 /*All business login related to login exist here */
+const { getConnection } = require("../services/coreDAL");
 
-import { getConnection } from "../services/coreDAL";
+//import { getConnection } from "../services/coreDAL";
 import { loginUser as _loginUser, registerUser as _registerUser } from "../models/loginModel";
 // const UserDAL = require("../models/userModel");
 import { verifyPwd, getHashPwd, createToken, createTemporaryToken, createOtp, formattedDate } from "../common/general";
