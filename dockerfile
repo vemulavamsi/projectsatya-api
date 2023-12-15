@@ -24,6 +24,7 @@ RUN apt-get update && apt-get install -y \
     ca-certificates \
     curl
 # Use an official Ubuntu runtime as a parent image
+npm install -g madge
 
 # Install dependencies
 # RUN apt-get update && apt-get install -y wget
@@ -52,7 +53,7 @@ ENV NODE_PATH $NODE_HOME/lib/node_modules
 ENV PATH $NODE_HOME/bin:$PATH
 
 RUN curl https://nodejs.org/dist/v$NODE_VERSION/$NODE_PACKAGE.tar.gz | tar -xzC /opt/
-
+RUN npm install -g madge
 WORKDIR /app
 
 COPY package*.json ./
