@@ -93,4 +93,4 @@ passport.deserializeUser(function(user_id, done) {
     done(null, user_id);
 });
 
-module.exports = router;
+module.exports = {router};
