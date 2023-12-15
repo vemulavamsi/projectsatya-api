@@ -90,7 +90,7 @@ class LoginController {
     }
   }
 }
-const LoginController = require("../controllers/loginController");
+//const LoginController = require("../controllers/loginController");
 module.exports = LoginController;
 
 
