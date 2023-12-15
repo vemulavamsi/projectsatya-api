@@ -15,6 +15,7 @@ const { verifyPwd, getHashPwd, createToken, createTemporaryToken, createOtp, for
 class LoginController {
   //User Login Method
   static async loginUser(loginData) {
+     console.log("Sathya*************Sathya")
     try {
       console.log("Sathya*************Sathya")
       const dbConn = await getConnection();
