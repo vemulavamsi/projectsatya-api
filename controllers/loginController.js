@@ -93,6 +93,6 @@ console.log(dbConn)
   }
 }
 //const LoginController = require("../controllers/loginController");
-module.exports = LoginController;
+module.exports = {LoginController};
 
 
