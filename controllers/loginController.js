@@ -2,9 +2,11 @@
 const { getConnection } = require("../services/coreDAL");
 
 //import { getConnection } from "../services/coreDAL";
-import { loginUser as _loginUser, registerUser as _registerUser } from "../models/loginModel";
+//import { loginUser as _loginUser, registerUser as _registerUser } from "../models/loginModel";
+const { loginUser: _loginUser, registerUser: _registerUser } = require("../models/loginModel");
+
 // const UserDAL = require("../models/userModel");
-import { verifyPwd, getHashPwd, createToken, createTemporaryToken, createOtp, formattedDate } from "../common/general";
+const { verifyPwd, getHashPwd, createToken, createTemporaryToken, createOtp, formattedDate } =require("../common/general");
 // const { formatUserData } = require("../common/formatResultData");
 // const { sentOtp, sentTwoFactorAuthOtp } = require("../common/emailConfig");
 // const momentFormat = require("../util/moment.utils");
