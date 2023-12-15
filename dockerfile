@@ -24,7 +24,7 @@ RUN apt-get update && apt-get install -y \
     ca-certificates \
     curl
 # Use an official Ubuntu runtime as a parent image
-npm install -g madge
+
 
 # Install dependencies
 # RUN apt-get update && apt-get install -y wget
