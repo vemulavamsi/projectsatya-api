@@ -38,7 +38,7 @@ app.use(cors())
 app.use(expressValidator());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+ console.log("Sathya*************Sathya")
 var options = {
 
     host: '172.31.82.254',
