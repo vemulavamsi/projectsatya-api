@@ -92,5 +92,5 @@ class LoginModel {
 
 }
 
-module.exports = LoginModel;
+module.exports = {LoginModel};
 
