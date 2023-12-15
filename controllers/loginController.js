@@ -90,4 +90,7 @@ class LoginController {
     }
   }
 }
-export default LoginController;
+const LoginController = require("../controllers/loginController");
+module.exports = LoginController;
+
+
