@@ -4,7 +4,7 @@ const expressValidator = require('express-validator');
 var bcrypt = require('bcrypt-nodejs');
 var passport = require('passport');
 const { request } = require('../app.js');
-var LoginController = require("../controllers/loginController");
+var LoginController = require("../controllers/loginController").default;
 
 
 router.get('/',function(req,res,next){

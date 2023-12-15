@@ -6,7 +6,7 @@ exports.poolConfig = function() {
         // host: localhost,
         // user: process.env.DB_USER,
         // database:process.env.DB_SCHEMA_NAME,
-        host: '172.31.88.20',
+        host: '172.31.82.254',
         user: 'root',
         password: 'Pycube123$',
         port: 3306,

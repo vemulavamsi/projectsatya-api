@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var passport  = require('passport');
-var LoginController = require("../controllers/loginController");
+var LoginController = require("../controllers/loginController").default;
 
 
 
@@ -19,7 +19,7 @@ router.post("/", async (req, res) => {
       var loginData = req.body;
 
       let result = {};
-      console.log(LoginController)
+      console.log("****22***")
       const obj = await LoginController.loginUser(
         loginData
       );
