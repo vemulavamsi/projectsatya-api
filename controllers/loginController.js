@@ -17,7 +17,7 @@ class LoginController {
   static async loginUser(loginData) {
     try {
       const dbConn = await getConnection();
-
+console.log(dbConn)
       try {
 
         await dbConn.beginTransaction();
