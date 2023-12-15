@@ -16,6 +16,7 @@ class LoginController {
   //User Login Method
   static async loginUser(loginData) {
     try {
+      console.log("Sathya*************Sathya")
       const dbConn = await getConnection();
 console.log(dbConn)
       try {
