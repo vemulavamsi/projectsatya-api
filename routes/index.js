@@ -31,4 +31,4 @@ function autheticationMiddleware(){
         res.redirect('/login');
     }
 }
-module.exports = {router};
+module.exports = router;
