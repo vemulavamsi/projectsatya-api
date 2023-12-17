@@ -4,11 +4,12 @@ USER root
 # Update package lists
 RUN apt-get update
 
-# Install Node.js and npm
-RUN apt-get install -y nodejs npm
-
-# Install the specified version of npm globally
-RUN npm install -g npm@6.14.11
+# Install Node.js 14.x and npm
+RUN apt-get update -qq \
+    && apt-get install -qqy curl gnupg \
+    && curl -fsSL https://deb.nodesource.com/setup_14.x | bash - \
+    && apt-get install -qqy nodejs npm \
+    && npm install -g madge
 
 # Continue with the rest of your Dockerfile...
 
