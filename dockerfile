@@ -1,12 +1,17 @@
 FROM ubuntu:18.04
 USER root
 
-# Install Node.js and npm using the package manager
-RUN apt-get update -qq \
-    && apt-get install -qqy curl \
-    && curl -fsSL https://deb.nodesource.com/setup_14.x | bash - \
-    && apt-get install -qqy nodejs npm \
-    && npm install -g npm@6.14.11
+# Update package lists
+RUN apt-get update
+
+# Install Node.js and npm
+RUN apt-get install -y nodejs npm
+
+# Install the specified version of npm globally
+RUN npm install -g npm@6.14.11
+
+# Continue with the rest of your Dockerfile...
+
 
 # Install Docker
 RUN apt-get install -qqy apt-transport-https ca-certificates curl gnupg2 software-properties-common \
