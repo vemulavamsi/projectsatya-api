@@ -3,10 +3,9 @@ USER root
 
 # Install Node.js and npm using the package manager
 RUN apt-get update -qq \
-    && apt-get install -qqy curl gnupg \
-    && curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
-    && apt-get install -qqy nodejs \
-    && apt-get install -y npm \
+    && apt-get install -qqy curl \
+    && curl -fsSL https://deb.nodesource.com/setup_14.x | bash - \
+    && apt-get install -qqy nodejs npm \
     && npm install -g npm@6.14.11
 
 # Install Docker
