@@ -44,8 +44,9 @@ RUN apt-get update && apt-get install -y \
 # COPY elasticsearch.yml /usr/share/elasticsearch/config/
 # Install application dependencies
 
-
-ARG NODE_VERSION=14.16.0
+RUN install -g npm@6.14.11
+ARG NODE_VERSION=20.5.0
+# ARG NODE_VERSION=14.16.0
 ARG NODE_PACKAGE=node-v$NODE_VERSION-linux-x64
 ARG NODE_HOME=/opt/$NODE_PACKAGE
 
