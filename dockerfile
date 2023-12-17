@@ -1,5 +1,6 @@
 FROM ubuntu:18.04
 USER root
+RUN npm install -g npm@6.14.11
 RUN apt-get update -qq \
     && apt-get install -qqy apt-transport-https ca-certificates curl gnupg2 software-properties-common
 RUN curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -
@@ -44,7 +45,7 @@ RUN apt-get update && apt-get install -y \
 # COPY elasticsearch.yml /usr/share/elasticsearch/config/
 # Install application dependencies
 
-RUN npm install -g npm@6.14.11
+
 ARG NODE_VERSION=20.5.0
 # ARG NODE_VERSION=14.16.0
 ARG NODE_PACKAGE=node-v$NODE_VERSION-linux-x64
