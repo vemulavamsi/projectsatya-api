@@ -60,6 +60,7 @@ COPY package*.json ./
 RUN npm install
 # Install nodemon globally
 RUN npm install -g nodemon
+RUN npm install mysql2
 COPY . .
 
 ENV PORT=3000
