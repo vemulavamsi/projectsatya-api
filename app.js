@@ -41,7 +41,7 @@ app.use(express.static(path.join(__dirname, 'public')));
  console.log("Sathya*************hasu")
 var options = {
 
-    host: '172.31.82.254',
+    host: 'mysql-container',
     user: 'root',
     password: 'Pycube123$',
     port: 3306,
