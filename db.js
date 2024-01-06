@@ -1,10 +1,10 @@
 var mysql = require('mysql');
 var db = mysql.createConnection({
-    host: 'localhost',
+    host: '172.31.82.254',
     user: 'root',
     password: 'Pycube123$',
     port: 3306,
-    database : 'nodeAuth'
+    database : 'vamsi_project'
 });
 
 db.connect(function(err){
